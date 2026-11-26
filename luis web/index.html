@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre Hojas: libros, útiles, mates personalizados y mucho más.">
+    <title>Entre Hojas | Un libro, unos mates y tu mundo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header" id="inicio">
+        <nav class="navbar container" aria-label="Navegación principal">
+            <a class="brand" href="#inicio" aria-label="Entre Hojas, inicio">
+                <span class="brand-mark">✦</span>
+                <span><strong>Entre</strong> Hojas</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+            <div class="nav-links" id="navLinks">
+                <a href="#productos">Productos</a>
+                <a href="#promociones">Promos</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#contacto">Contacto</a>
+                <button class="cart-button" id="openCart" type="button" aria-label="Abrir carrito">
+                    Carrito <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <div class="hero-copy">
+                <span class="eyebrow">Librería & tienda creativa</span>
+                <h1>Un libro, unos mates <em>y tu mundo.</em></h1>
+                <p>Un rincón para leer, crear y compartir. Encontrá todo lo que hace especial a tus días, entre hojas y momentos.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#productos">Explorar productos <span>→</span></a>
+                    <a class="text-link" href="#nosotros">Conocé nuestra historia</a>
+                </div>
+                <div class="hero-note"><span>✿</span> Hecho con cariño en cada detalle</div>
+            </div>
+            <div class="hero-art" aria-label="Ilustración de mates y naturaleza">
+                <div class="leaf leaf-one">❧</div>
+                <div class="leaf leaf-two">❧</div>
+                <div class="sun-circle"></div>
+                <div class="mate-scene">
+                    <div class="mate mate-large"><span class="mate-straw"></span><span class="mate-body">◒</span></div>
+                    <div class="mate mate-small"><span class="mate-straw"></span><span class="mate-body">◒</span></div>
+                    <span class="mate-leaf">✿</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-strip container" aria-label="Categorías">
+            <a href="#productos" data-category-link="libros"><span>▤</span> Libros</a>
+            <a href="#productos" data-category-link="utiles"><span>✎</span> Útiles escolares</a>
+            <a href="#productos" data-category-link="mates"><span>◒</span> Mates personalizados</a>
+            <a href="#productos" data-category-link="termos"><span>♧</span> Termos y bombillas</a>
+            <a href="#productos" data-category-link="calcos"><span>✦</span> Calcomanías</a>
+        </section>
+
+        <section class="section container" id="productos">
+            <div class="section-heading">
+                <div><span class="eyebrow">Elegidos para vos</span><h2>Productos destacados</h2></div>
+                <div class="category-filters" role="group" aria-label="Filtrar productos">
+                    <button class="filter active" type="button" data-filter="todos">Todo</button>
+                    <button class="filter" type="button" data-filter="libros">Libros</button>
+                    <button class="filter" type="button" data-filter="mates">Mates</button>
+                    <button class="filter" type="button" data-filter="utiles">Útiles</button>
+                    <button class="filter" type="button" data-filter="termos">Termos</button>
+                </div>
+            </div>
+            <div class="product-grid" id="productGrid"></div>
+        </section>
+
+        <section class="promo-banner container" id="promociones">
+            <div><span class="eyebrow">Promo de la semana</span><h2>Tu ritual de estudio, más lindo.</h2><p>10% OFF en tu primera compra usando el código <strong>ENTREHOJAS</strong></p></div>
+            <a class="button button-light" href="#productos">Ver productos <span>→</span></a>
+            <span class="promo-sparkle">✦</span>
+        </section>
+
+        <section class="about section container" id="nosotros">
+            <div class="about-art"><div class="about-circle">✿</div><span class="about-leaf">❧</span></div>
+            <div class="about-copy"><span class="eyebrow">Nuestra historia</span><h2>Un lugar para encontrar tu próximo favorito</h2><p>Entre Hojas nació de la mezcla de dos pasiones: perdernos en las páginas de un buen libro y disfrutar un mate compartido. Somos una librería y tienda creativa pensada para acompañar tus ideas, tus rituales y cada nuevo comienzo.</p><p>Seleccionamos productos útiles, lindos y con personalidad, porque creemos que los pequeños detalles también cuentan historias.</p><a class="text-link" href="#contacto">Hablemos <span>→</span></a></div>
+        </section>
+
+        <section class="contact section container" id="contacto">
+            <div class="contact-copy"><span class="eyebrow">Estamos para ayudarte</span><h2>¿Charlamos?</h2><p>Escribinos por tu pedido, una consulta o simplemente para compartirnos qué estás leyendo.</p><div class="contact-details"><a href="https://instagram.com" target="_blank" rel="noreferrer">◎ @entrehojas</a><a href="https://wa.me/5491100000000" target="_blank" rel="noreferrer">◌ WhatsApp</a><span>⌂ Buenos Aires, Argentina</span></div></div>
+            <form class="contact-form" id="contactForm"><label for="contactName">Tu nombre</label><input id="contactName" name="name" type="text" placeholder="¿Cómo te llamás?" required><label for="contactEmail">Tu email</label><input id="contactEmail" name="email" type="email" placeholder="nombre@email.com" required><label for="contactMessage">Mensaje</label><textarea id="contactMessage" name="message" rows="3" placeholder="Contanos..." required></textarea><button class="button button-primary" type="submit">Enviar mensaje <span>→</span></button><p class="form-message" id="formMessage" role="status"></p></form>
+        </section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="#inicio"><span class="brand-mark">✦</span><span><strong>Entre</strong> Hojas</span></a><p>Hecho para disfrutar lo cotidiano.</p><span>© 2025 Entre Hojas</span></div></footer>
+
+    <div class="cart-overlay" id="cartOverlay" hidden></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras" aria-hidden="true">
+        <div class="cart-header"><div><span class="eyebrow">Tu selección</span><h2>Carrito</h2></div><button class="close-cart" id="closeCart" type="button" aria-label="Cerrar carrito">×</button></div>
+        <div class="cart-items" id="cartItems"><p class="empty-cart">Tu carrito está esperando nuevos favoritos.</p></div>
+        <div class="cart-footer"><div class="cart-total"><span>Total</span><strong id="cartTotal">$0</strong></div><button class="button button-primary checkout-button" id="checkoutButton" type="button">Finalizar compra <span>→</span></button></div>
+    </aside>
+    <script src="script.js"></script>
+</body>
+</html>
